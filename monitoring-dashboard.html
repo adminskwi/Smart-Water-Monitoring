@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Monitoring Dashboard</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A500%2C600%2C700%2C800"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A500%2C600%2C700%2C800"/>
+  <link rel="stylesheet" href="./styles/monitoring-dashboard.css"/>
+</head>
+<body>
+<div class="home-monitoring-dashboard-RJm">
+  <div class="main-navbar-Ay1">
+    <div class="dashboard-Uj2">
+      <div class="dashboard-po3">
+        <div class="dashboard-HR4">Import Data</div>
+      </div>
+    </div>
+  </div>
+  <div class="pH-Level-EJu">
+    <div class="auto-group-qqez-7dh">
+      <div class="pH-Level-FUb">pH Level</div>
+    </div>
+    <div class="auto-group-zf8s-81y">
+      <img class="icon-3sg" src="./assets/icon-ph.png"/>
+      <div class="pH-Level-NBv">0</div>
+    </div>
+  </div>
+  <div class="temperature-fVo">
+    <div class="auto-group-tiir-XXk">
+      <div class="title-GEm">Temperature</div>
+    </div>
+    <div class="auto-group-zf7s-81i">
+      <img class="icon-2sj" src="./assets/icon-33s.png"/>
+      <div class="temperature-NBn">0° C</div>
+    </div>
+  </div>
+  <div class="temperature-fVq">
+    <div class="auto-group-tiir-XXa">
+      <div class="title-GEw">Temperature</div>
+    </div>
+    <div class="auto-group-zf7s-81d">
+      <img class="icon-2sx" src="./assets/icon-33s.png"/>
+      <div class="temperature-NBe">0° C</div>
+    </div>
+  </div>
+  <div class="pH-Level-EJl">
+    <div class="auto-group-qqez-7dw">
+      <div class="pH-Level-FUl">pH Level</div>
+    </div>
+    <div class="auto-group-zf8s-81f">
+      <img class="icon-3sr" src="./assets/icon-ph.png"/>
+      <div class="pH-Level-NB0">0</div>
+    </div>
+  </div>
+  <div class="pH-Level-EJk">
+    <div class="auto-group-qqez-7dq">
+      <div class="pH-Level-FUk">pH Level</div>
+    </div>
+    <div class="auto-group-zf8s-81d">
+      <img class="icon-3se" src="./assets/icon-ph.png"/>
+      <div class="pH-Level-NB9">0</div>
+    </div>
+  </div>
+  <div class="pH-Level-EJh">
+    <div class="auto-group-qqez-7dP">
+      <div class="pH-Level-FUh">pH Level</div>
+    </div>
+    <div class="auto-group-zf8s-81s">
+      <img class="icon-3sw" src="./assets/icon-ph.png"/>
+      <div class="pH-Level-NB8">0</div>
+    </div>
+  </div>
+  <div class="Salinity-AoF">  
+    <div class="auto-group-nzfb-U3F">
+      <div class="title-CV3">Salinity</div>
+    </div>
+    <div class="auto-group-zf6s-81s">
+      <img class="icon-1sw" src="./assets/icon-salinity.png"/>
+      <div class="Salinity-NB6">0 PPT</div>
+    </div>
+  </div>
+  <div class="temperature-fVf">
+    <div class="auto-group-tiir-XXs">
+      <div class="title-GEZ">Temperature</div>
+    </div>
+    <div class="auto-group-zf7s-81s">
+      <img class="icon-2sw" src="./assets/icon-33s.png"/>
+      <div class="temperature-NB7">0° C</div>
+    </div>
+  </div>
+  <div class="weather-ZQ1">
+    <div class="auto-group-cqzz-eRT">
+      <div class="title-zVK">Weather</div>
+      <div class="weather-description-iRK">
+        <div class="auto-group-p7ty-Fw3">
+          <div class="city-bED" id="city"></div>
+          <div class="temperature-8E9" id="temperature"></div>
+        </div>
+        <div class="lowest-highest-eyB">
+          <div class="lowest-PQy" id="minTemp"></div>
+          <div class="item--L5K">/</div>
+          <div class="highest-GDs" id="maxTemp"></div>
+        </div>
+        <div class="summary-bmw" id="weatherSummary"></div>
+      </div>
+    </div>
+    <img class="illustrator-k93" src="./assets/illustrator-4U5.png"/>
+  </div>
+  <div class="main-navbar-AyT">
+    <div class="dashboard-UjF">
+      <div class="dashboard-po7">
+        <img class="icon-dashboard-xuK" src="./assets/icon-dashboard-sPj.png"/>
+        <div class="dashboard-HRo">Dashboard</div>
+      </div>
+    </div>
+    <div class="devices-BXB">
+      <img class="icon-devices-iGD" src="./assets/icon-profile.png"/>
+      <div class="devices-Sxu" onclick="manage()">Manage</div>
+    </div>
+    <div class="lights-mkH">
+      <img class="icon-lights-WSy" src="./assets/icon-data-export.png"/>
+      <div class="lights-qEM" onclick="DataExport()">Data Export</div>
+    </div>
+  </div>
+  <div class="top-navbar-k5j">
+    <div class="metahome-eS1">Smart Monitoring</div>
+    <div class="time-date-AQM" id="timeAndDate">
+      <div class="time-VxR"></div>
+      <div class="date-zuB"></div>
+    </div>
+    <div class="customize-dashboard-7D7">Dashboard</div>
+    <div class="user-25B">
+      <div class="auto-group-xbjb-ASH">
+        <img class="expanddownlight-tdB" src="./assets/expanddownlight-V2M.png"/>
+        <div class="hello-iman-R7K">
+          <span class="hello-iman-R7K-sub-0">Test </span>
+          <span class="hello-iman-R7K-sub-1">Admin</span>
+        </div>
+      </div>
+      <div class="ellipse-1-sNd">
+      </div>
+    </div>
+    <img class="btn-sign-out-zi9" src="./assets/btn-sign-out.png" onclick="signOut()">
+  </div>
+</div>
+
+<script>
+  function updateWeather() {
+      // Replace 'YOUR_API_KEY' with your OpenWeatherMap API key
+      var apiKey = '0a066ad83829648bfeb7bdff3353c77e';
+      var city = 'General Santos'; // Replace with your desired city
+
+      var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => { 
+          document.getElementById('city').textContent = data.name;
+          document.getElementById('temperature').textContent = data.main.temp + '°C';
+          document.getElementById('minTemp').textContent = data.main.temp_min + '°C';
+          document.getElementById('maxTemp').textContent = data.main.temp_max + '°C';
+          document.getElementById('weatherSummary').textContent = data.weather[0].description;
+        })
+        .catch(error => console.error('Error fetching weather data:', error));
+  }
+  function updateClock() {
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+
+    var timeString = formatTime(hours, minutes, seconds);
+
+    var dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    var dateString = now.toLocaleDateString('en-US', dateOptions);
+
+    document.querySelector('.time-VxR').textContent = timeString;
+    document.querySelector('.date-zuB').textContent = dateString;
+  }
+
+  function formatTime(hours, minutes, seconds) {
+    var period = (hours >= 12) ? 'PM' : 'AM';
+    hours = (hours % 12) || 12;
+    return hours + ':' + (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds + ' ' + period;
+  }
+  function signOut() {
+    // You can add any sign-out logic here if needed
+
+    // Redirect to the login page after signing out
+    window.location.href = "log-in-interface.html"; // Replace "login.html" with the actual filename or path of the login page
+  }
+  function manage() {
+    window.location.href = "monitoring-manage.html";
+  }
+  function DataExport() {
+    window.location.href = "monitoring-data-export.html";
+  }
+
+  // Update the clock every second
+  setInterval(updateClock, 1000);
+
+  // Update the weather every 10 minutes (600,000 milliseconds)
+  setInterval(updateWeather, 600000);
+
+  // Initial calls to display time, date, and weather immediately
+  updateClock();
+  updateWeather();
+  </script>
+
+</body>
+</html>

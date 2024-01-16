@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Monitoring Data Export</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A500%2C600%2C700%2C800"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A500%2C600%2C700%2C800"/>
+  <link rel="stylesheet" href="./styles/monitoring-data-export.css"/>
+</head>
+<body>
+<div class="home-monitoring-dashboard-RJm"> 
+  <div class="main-navbar-AyT">
+    <div class="dashboard-UjF">
+      <div class="dashboard-po7">
+        <img class="icon-dashboard-xuK" src="./assets/icon-dashboard-sPj.png"/>
+        <div class="dashboard-HRo" onclick="dashBoard()">Dashboard</div>
+      </div>
+    </div>
+    <div class="devices-BXB">
+      <img class="icon-devices-iGD" src="./assets/icon-profile.png"/>
+      <div class="devices-Sxu" onclick="manage()">Manage</div>
+    </div>
+    <div class="lights-mkH">
+      <img class="icon-lights-WSy" src="./assets/icon-data-export.png"/>
+      <div class="lights-qEM">Data Export</div>
+    </div>
+  </div>
+  <div class="top-navbar-k5j">
+    <div class="metahome-eS1">Smart Monitoring</div>
+    <div class="time-date-AQM" id="timeAndDate">
+      <div class="time-VxR"></div>
+      <div class="date-zuB"></div>
+    </div>
+    <div class="customize-dashboard-7D7">Dashboard</div>
+    <div class="user-25B">
+      <div class="auto-group-xbjb-ASH">
+        <img class="expanddownlight-tdB" src="./assets/expanddownlight-V2M.png"/>
+        <div class="hello-iman-R7K">
+          <span class="hello-iman-R7K-sub-0">Test </span>
+          <span class="hello-iman-R7K-sub-1">Admin</span>
+        </div>
+      </div>
+      <div class="ellipse-1-sNd">
+      </div>
+    </div>
+    <img class="btn-sign-out-zi9" src="./assets/btn-sign-out.png" onclick="signOut()">
+  </div>
+</div>
+
+<script>
+  function updateClock() {
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+
+    var timeString = formatTime(hours, minutes, seconds);
+
+    var dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    var dateString = now.toLocaleDateString('en-US', dateOptions);
+
+    document.querySelector('.time-VxR').textContent = timeString;
+    document.querySelector('.date-zuB').textContent = dateString;
+  }
+
+  function formatTime(hours, minutes, seconds) {
+    var period = (hours >= 12) ? 'PM' : 'AM';
+    hours = (hours % 12) || 12;
+    return hours + ':' + (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds + ' ' + period;
+  }
+  function signOut() {
+    // You can add any sign-out logic here if needed
+
+    // Redirect to the login page after signing out
+    window.location.href = "log-in-interface.html"; // Replace "login.html" with the actual filename or path of the login page
+  }
+  function dashBoard() {
+    window.location.href = "monitoring-dashboard.html";
+}
+  function manage() {
+    window.location.href = "monitoring-manage.html";
+}
+  // Update the clock every second
+  setInterval(updateClock, 1000);
+
+  // Initial calls to display time, date, and weather immediately
+  updateClock();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./styles/log-in-interface.css">
+  </head>
+  <body>
+    <div class="center">
+      <h1>Login</h1>
+      <form id="loginForm">
+        <div class="txt_field">
+          <input type="text" id="username" required>
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" id="password" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+        <input type="button" value="Login" onclick="signIn()">
+      </form>
+    </div>
+
+    <script>
+      function signIn() {
+        // Hard-coded username and password (for simplicity, replace with secure authentication logic)
+        var validUsername = "admin";
+        var validPassword = "123";
+
+        // Retrieve values from the form
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        // Check if the provided username and password match the hard-coded values
+        if (username === validUsername && password === validPassword) {
+          alert("Login successful!");
+          // Redirect to another HTML page after successful login
+          window.location.href = "monitoring-dashboard.html"; // Replace "dashboard.html" with the desired page
+        } else {
+          alert("Login failed. Please check your username and password.");
+        }
+      }
+    </script>
+
+  </body>
+</html>
